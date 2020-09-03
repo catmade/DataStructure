@@ -43,6 +43,22 @@ public class BinaryTreeNode<T> {
         this.right = right;
     }
 
+    /**
+     * 深度
+     *
+     * @return 深度
+     */
+    public int deep() {
+        if (this.left == null && this.right == null) {
+            return 1;
+        }
+
+        int leftDeep = this.left == null ? 0 : this.left.deep();
+        int rightDeep = this.right == null ? 0 : this.right.deep();
+
+        return 1 + Math.max(leftDeep, rightDeep);
+    }
+
     @Override
     public String toString() {
         return data.toString();
