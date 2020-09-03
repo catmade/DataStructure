@@ -28,7 +28,7 @@ public interface Sort {
      * @param array 数组
      * @param i     下标1
      * @param j     下标2
-     * @param <T>   数据
+     * @param <T>   数据`
      */
     default <T> void swap(T[] array, int i, int j) {
         T temp = array[i];
